@@ -16,7 +16,9 @@ case "$ARC" in
       ;;
 esac
 
-wget https://dl.k8s.io/${K8S_VER}/kubernetes-node-linux-${ARCH}.tar.gz && \
-tar zxf kubernetes-node-linux-${ARCH}.tar.gz && \
-mv kubernetes/node/bin/kubelet kubernetes/node/bin/kubectl /k8s && \
-rm -rf kubernetes-node-linux-${ARCH}.tar.gz kubernetes
+wget https://dl.k8s.io/${K8S_VER}/kubernetes-server-linux-${ARCH}.tar.gz && \
+tar zxf kubernetes-server-linux-${ARCH}.tar.gz && \
+cd kubernetes/server/bin && \
+mv kube-apiserver kube-controller-manager kube-scheduler /k8s && \
+mv kubelet kube-proxy kubectl /k8s && \
+rm -rf /kubernetes-server-linux-${ARCH}.tar.gz

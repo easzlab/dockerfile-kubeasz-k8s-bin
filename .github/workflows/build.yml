@@ -14,10 +14,10 @@ jobs:
       matrix:
         include:
           #- version: v1.26.0
-          - version: v1.25.5
-          - version: v1.24.9
-          - version: v1.23.15
-          - version: v1.22.17
+          - version: v1.25.6
+          - version: v1.24.10
+          - version: v1.23.16
+          - version: v1.26.1
     permissions:
       contents: read
       packages: write

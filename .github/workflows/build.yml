@@ -13,10 +13,10 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - version: v1.24.14
-          - version: v1.25.10
-          - version: v1.26.5
-          - version: v1.27.2
+          - version: v1.24.15
+          - version: v1.25.11
+          - version: v1.26.6
+          - version: v1.27.3
     permissions:
       contents: read
       packages: write
